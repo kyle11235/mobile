@@ -1,0 +1,79 @@
+<AbsoluteLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/lv">
+
+   <TextView
+       android:id="@+id/tv1"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_x="50dp"
+       android:layout_y="50dp"
+       android:text="@string/name" 
+       android:textColor="@color/blue"
+       />
+   
+   <TextView
+       android:id="@+id/tv2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_x="50dp"
+       android:layout_y="100dp"
+       android:textColor="@color/blue"
+       android:text="@string/password" />
+   
+   
+	<EditText
+	       android:id="@+id/et1"
+	       android:layout_width="100dp"
+	       android:layout_height="wrap_content"
+	       android:layout_x="100dp"
+	       android:layout_y="50dp"
+	       android:ems="10"
+	       android:inputType="textPassword" >
+	
+	       <requestFocus />
+	   </EditText>
+    <EditText
+       android:id="@+id/et2"
+       android:layout_width="100dp"
+       android:layout_height="wrap_content"
+       android:layout_x="100dp"
+       android:layout_y="100dp"
+       android:ems="10" />
+
+   
+  
+    <ScrollView
+       android:id="@+id/sv1"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:layout_x="0dp"
+       android:layout_y="200dp" >
+
+       <EditText
+           android:id="@+id/et3"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:ems="10" />
+   </ScrollView>
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="50dp"
+        android:layout_y="150dp"
+        android:text="@string/ok" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="200dp"
+        android:layout_y="150dp"
+        android:text="@string/cancel" />
+   
+</AbsoluteLayout>

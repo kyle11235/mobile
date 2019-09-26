@@ -1,0 +1,29 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/lv">
+
+	<TextView android:id="@+id/tv1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:text="@string/big"
+	    android:textSize="300sp"
+		android:background="@color/red"
+	    />
+   <TextView android:id="@+id/tv2"
+	    android:layout_width="200dp"
+	    android:layout_height="200dp"
+	    android:text="@string/middle"
+	    android:textSize="200sp"
+	    android:background="@color/green"
+	    />
+   <TextView android:id="@+id/tv3"
+	    android:layout_width="100dp"
+	    android:layout_height="100dp"
+	    android:text="@string/small"
+	    android:textSize="100sp"
+	    android:background="@color/blue"
+	    />
+</FrameLayout>

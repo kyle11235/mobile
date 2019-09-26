@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">My First App</string>
+    <string name="action_settings">Settings</string>
+
+    
+    
+    <!-- activity_main -->
+    <string name="edit_message">Enter a message</string>
+    <string name="button_send">Send</string>
+    <string name="title_activity_main">MainActivity</string>
+    
+    
+    <!-- activity_display_message -->
+    <string name="title_activity_display_message">My Message</string>
+    
+    
+    
+    <!-- values -->
+    <string name="hello_world">Hello world!</string>
+    
+    
+    
+    <!-- preferences -->
+    <string name="saved_high_score">saved_high_score</string>
+	<string name="saved_high_score_default">1001</string>
+    
+</resources>
