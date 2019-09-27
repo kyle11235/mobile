@@ -12,8 +12,9 @@
         - open eclipse, popup dialogue shows the link to download jdk for mac from apple website
         - follow below instruction to install jdk
 
-        vi /etc/profile
-        export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/
+        sudo vi /etc/profile
+        export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home
+        source /etc/profile
 
         configure eclipse -> installed jre -> choose jdk path
         cd sdk/tools && ./android sdk (open sdk manager)
