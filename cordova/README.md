@@ -124,7 +124,7 @@
         sudo vi /etc/profile
         export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home
         export ANDROID_SDK_ROOT=/Users/kyle/Library/Android/sdk
-        export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
+        export PATH=$PATH:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/tools/bin:$ANDROID_SDK_ROOT/platform-tools
         source /etc/profile
 
         - install AVD (virtual device)
@@ -138,7 +138,7 @@
         ./android.sh (build apk and install to avd, no need to restart avd)
 
         - open in android studio
-        open platforms/android
+        import platforms/android
 
         - deploy to device
         ...
