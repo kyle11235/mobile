@@ -127,3 +127,8 @@
                         BitmapUtil.loadBitmap(getResources(), R.drawable.ballon, iv, 576, 384, null);
                 - use cache if issue with multiple images
                         Bitmap bitmap = bitmapCache.getBitmap(this, R.drawable.ballon, 576, 384);
+
+- android version / api level
+
+        https://developer.android.com/guide/topics/manifest/uses-sdk-element
+        https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html#requirements-and-support
