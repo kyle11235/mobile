@@ -11,9 +11,16 @@
         - get started
         https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/index.html
 
-- xcode
+- install
 
-        xcode7.15G
+        xcode 9.4.1 for mac os 10.13.6 high sierra
+        download xxx.xip from https://developer.apple.com/download/more/
+        double click to extract and move to application
+        xcode-select --install
+        sudo -i
+        npm install --unsafe-perm=true -g ios-deploy        
+
+- legacy
 
         - 2015-12-02
         start to build "FoodTracker"
