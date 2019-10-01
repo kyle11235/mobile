@@ -7,10 +7,10 @@
         double click to extract and move to application
         xcode-select --install
         sudo -i
-        npm install --unsafe-perm=true -g ios-deploy        
-        
+        npm install --unsafe-perm=true -g ios-deploy
+
 - deploy to device
-        
+
         preference -> accounts -> xxx@126.com
         project -> general
                 -> identity -> change bundle identifier from io.cordova.hellocordova to xxx@126.com

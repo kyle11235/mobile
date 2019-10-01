@@ -50,7 +50,7 @@
         remove unused large system image in /Users/kyle/Library/Android/sdk/system-images
 
 - ubuntu / studio
-        
+
         extract it
         mv android-studio /u02/app/
         cd /u20/app/android-studio/bin
@@ -91,7 +91,7 @@
 
         - avd
         studio -> configure -> avd manager
-        
+
 - mac / eclipse / bundle
 
         - download bundle from http://tools.android-studio.org
@@ -138,11 +138,11 @@
         source "$HOME/.sdkman/bin/sdkman-init.sh"
         sdk install gradle 5.6.2
         gradle -v
-        
+
         - mac
         install brew
         brew install gradle
-        
+
 - create AVD
 
         - firstly need to install SDK System images

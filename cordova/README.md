@@ -6,7 +6,6 @@
         sudo -i
         install -g cordova
 
-
 - create
 
         cordova create hello
@@ -54,7 +53,7 @@
         https://cordova.apache.org/docs/en/latest/guide/platforms/ios/index.html#requirements-and-support
 
         - install xcode
-        
+
         - simulator test
         ./ios.sh directly without opening xcode
 
@@ -92,4 +91,3 @@
 
         A plugin exposes a Javascript API for native SDK functionality
         https://cordova.apache.org/plugins/
-
