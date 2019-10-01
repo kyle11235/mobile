@@ -3,10 +3,96 @@
 
 ## insntall
 
-        - official website
-        - http://tools.android-studio.org
+- mac / studio
 
-- mac bundle
+        install it
+        open it, follow guide to install android sdk
+
+        Setup Type: Standard
+        SDK Folder: /Users/kyle/Library/Android/sdk
+        Total Download Size: 548 MB
+        SDK Components to Download:
+        Android Emulator
+        288 MB
+        Android SDK Build-Tools 29.0.2
+        39 MB
+        Android SDK Platform 29
+        74.6 MB
+        Android SDK Platform-Tools
+        8.28 MB
+        Android SDK Tools
+        98.2 MB
+        Intel x86 Emulator Accelerator (HAXM installer)
+        619 KB
+        SDK Patch Applier v4
+        1.74 MB
+        Sources for Android 29
+        37.6 MB
+
+        - set path
+        sudo vi /etc/profile
+        export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home
+        export ANDROID_SDK_ROOT=/Users/kyle/Library/Android/sdk
+        export PATH=$PATH:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/tools/bin:$ANDROID_SDK_ROOT/platform-tools
+        source /etc/profile
+
+        - install sdk package
+        android studio star page / preference -> sdk manager -> show details
+          -> sdk platforms
+          install sdk api level 28, for cordova 8.x supports up to level 28
+          do not remove level 29, for studio find sdk by it
+          -> sdk tools
+          install sdk tools for level 28, be sure to check show package details
+
+        - install AVD (virtual device)
+        android studio start page -> avd manager -> next
+        download / select system image -> api level 28 -> next / finish
+        remove unused large system image in /Users/kyle/Library/Android/sdk/system-images
+
+- ubuntu / studio
+        
+        extract it
+        mv android-studio /u02/app/
+        cd /u20/app/android-studio/bin
+        ./studio.sh
+
+        /home/kyle/Android/Sdk
+        Total Download Size: 581 MB
+        SDK Components to Download: 
+        Android Emulator
+
+        272 MB
+        Android SDK Build-Tools 29.0.2
+
+        39.7 MB
+        Android SDK Platform 29
+
+        74.6 MB
+        Android SDK Platform-Tools
+
+        8.33 MB
+        Android SDK Tools
+
+        147 MB
+        SDK Patch Applier v4
+
+        1.74 MB
+        Sources for Android 29
+
+        37.6 MB
+
+        export PATH=/u02/app/android-studio/bin:$PATH
+        export ANDROID_SDK_ROOT=/home/kyle/Android/Sdk
+        export PATH=$PATH:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/tools/bin:$ANDROID_SDK_ROOT/platform-tools
+        source /etc/profile
+
+        - sdk
+        studio -> configure -> sdk manager
+
+        - avd
+        studio -> configure -> avd manager
+        
+- mac / eclipse / bundle
 
         - download bundle from http://tools.android-studio.org
         - open eclipse, popup dialogue shows the link to download jdk for mac from apple website
@@ -19,7 +105,7 @@
         configure eclipse -> installed jre -> choose jdk path
         cd sdk/tools && ./android sdk (open sdk manager)
 
-- windows manual
+- windows / eclipse / manual
 
         - insntall ADT in eclipse, ADT = sdk manager + emulator
         - if online not work
@@ -31,7 +117,7 @@
         - restart eclipse, check to download one of the sdk
         - or manually download sdk, put into sdk manager dirtory
 
-- windows bundle
+- windows / eclipse / bundle
 
         - ADT Bundle = Eclipse + ADT plugin + sdk tools
         - get the adt bundle http://tools.android-studio.org/index.php/adt-bundle-plugin
@@ -44,6 +130,19 @@
 
 ## basic
 
+- install gradle
+
+        - jdk is required
+        - most unix
+        install sdkman -> curl -s "https://get.sdkman.io" | bash
+        source "$HOME/.sdkman/bin/sdkman-init.sh"
+        sdk install gradle 5.6.2
+        gradle -v
+        
+        - mac
+        install brew
+        brew install gradle
+        
 - create AVD
 
         - firstly need to install SDK System images
