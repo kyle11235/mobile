@@ -59,6 +59,7 @@
 
 - helloworld
 
+        - guide https://developer.android.com/training/basics/firstapp/
         - create android project
         - start a AVD
         - debug project as android application, log view will be open

@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">myfirstapp2019</string>
+    <string name="edit_message">enter a message</string>
+    <string name="button_send">Send</string>
+
+</resources>
