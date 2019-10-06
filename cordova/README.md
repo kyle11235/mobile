@@ -91,3 +91,7 @@
 
         A plugin exposes a Javascript API for native SDK functionality
         https://cordova.apache.org/plugins/
+
+- cordova version / api lavel
+
+        https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html#requirements-and-support

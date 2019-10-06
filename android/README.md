@@ -160,11 +160,156 @@
 
         - guide https://developer.android.com/training/basics/firstapp/
         - create android project
-        - start a AVD
-        - debug project as android application, log view will be open
-        - then you can see main activity in the AVD, and Hello icon is listed on the screen of AVD
-        - you can export the project as apk and install it to real device
-        - if change the view, no need to restart AVD, just stop project and restart it.
+        - sync with gradle file if config is changed
+        - build simple UI using relative / constraint layout
+        - start a AVD (no restart required)
+        - run / debug, log view will be open
+        - build pkg
+        build -> build apk -> myfirstapp2019/app/build/outputs/apk/debug/app-debug.apk
+
+- abd
+
+        - connect
+
+                - path
+                which abd
+                e.g. /Users/kyle/Library/Android/sdk/platform-tools/adb
+                local adb client -> local adb server -> adbd on remove device
+
+                - connect
+                adb connect 192.168.1.102
+                e.g. connected to 192.168.1.102:5555
+
+                - list devices
+                adb devices
+
+        - check device info
+
+                - version
+                adb shell getprop ro.build.version.release
+
+                - lots of device info
+                adb shell cat /system/build.prop
+
+                - reboot
+                adb reboot
+
+                - ip
+                adb shell netcfg
+
+                - list all apps
+                adb shell pm list packages
+
+                - list 3 party apps
+                adb shell pm list packages -3
+
+                - list system apps
+                adb shell pm list packages -s
+
+                - process
+                adb shell ps
+                adb shell top
+
+                - cpu
+                adb shell cat /proc/cpuinfo
+                e.g. Processor : ARMv7 Processor rev 0 (v7l)
+
+                - free -m
+                total         used         free       shared      buffers
+                770          697           73            0           18
+
+                - df
+                Filesystem             Size   Used   Free   Blksize
+                /dev                   385M    64K   385M   4096
+                /mnt/secure            385M     0K   385M   4096
+                /mnt/asec              385M     0K   385M   4096
+                /mnt/obb               385M     0K   385M   4096
+                /storage/external_storage   385M     0K   385M   4096
+                /system                881M   501M   380M   4096
+                /data                    1G     1G   368M   4096
+                /cache                 440M    20M   419M   4096
+                /mnt/shell/emulated      1G     1G   368M   4096
+
+        - package management
+
+                - install apk (-r replace)
+                adb install -r ./app/build/outputs/apk/debug/app-debug.apk
+
+                - clear data / cache
+                adb shell pm clear com.example.myfirstapp2019
+
+                - check info
+                adb shell dumpsys package com.example.myfirstapp2019
+
+                - uninstall
+                adb uninstall com.example.myfirstapp2019
+
+        - app management
+
+                - start activity
+                adb shell am start -n com.example.myfirstapp2019/.MainActivity
+
+                - start service
+                adb shell am startservice -n com.example.myfirstapp2019/.xxxService
+
+                - check curernt activity
+                adb shell dumpsys activity activities | grep mFocusedActivity
+                e.g. com.example.myfirstapp2019/.MainActivity
+
+                - check running service
+                adb shell dumpsys activity services | grep com.example.myfirstapp2019 (package name is optional and incomplete is ok)
+
+                - stop app
+                adb shell am force-stop com.example.myfirstapp2019
+
+        - file management
+
+                adb pull /sdcard/sc.png ./doc/sc.png
+                adb push ./doc/sc.png /sdcard/sc.png
+
+        - take screenshot
+
+                adb shell screencap -p /sdcard/sc.png
+                adb pull /sdcard/sc.png ./doc/sc.png
+
+        - record video, max 180 sec
+
+                adb shell screenrecord /sdcard/video.mp4
+                ctrl + c to stop
+
+        - simulate key input
+
+                - menu
+                adb shell input keyevent 82
+
+                - home
+                adb shell input keyevent 3
+
+                - back
+                adb shell input keyevent 4
+
+                - play
+                adb shell input keyevent 85
+
+                - input text
+                adb shell input text hello
+                ...
+
+        - log
+
+                adb logcat "tag:level" (V / D / W / E / F / S)
+                e.g. adb logcat "*:E"
+
+        - flash system
+
+                adb sideload xxx.zip
+
+- adb shell
+
+        adb connect ...
+        abd shell
+        ls sdcard
+        ls data -> opendir failed, Permission denied
 
 - components
 
@@ -190,17 +335,6 @@
         - MyDynamicFragmentActivity, this one shows how to set layout based on screen size, if it's normal size, only create headline fragment.
                 if it's large size, use defined layout(headline+article) in layout-large folder, the activity interacts with headline fragment by OnHeadlineSelectedListener,
         // to dynamically add and remove fragments ,must sue fragment manager
-
-- abd is debug tool
-
-        configure adb, /Users/Alice/Kyle/android/adt-bundle-mac-x86_64-20140702/sdk/platform-tools
-        vi /etc/profile
-        export PATH=${PATH}:/Users/Alice/Kyle/android/adt-bundle-mac-x86_64-20140702/sdk/platform-tools
-        abd shell
-        cd data/data
-        ls -l
-        check 14-SQLite
-        adb uninstall com.example.test
 
 - issues
 
@@ -231,4 +365,3 @@
 - android version / api level
 
         https://developer.android.com/guide/topics/manifest/uses-sdk-element
-        https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html#requirements-and-support
