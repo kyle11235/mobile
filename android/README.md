@@ -299,6 +299,7 @@
 
                 adb logcat "tag:level" (V / D / W / E / F / S)
                 e.g. adb logcat "*:E"
+                e.g. adb logcat "*:E" | grep com.example.myfirstapp2019
 
         - flash system
 
