@@ -53,7 +53,7 @@
 
         extract it
         mv android-studio /u02/app/
-        cd /u20/app/android-studio/bin
+        cd /u02/app/android-studio/bin
         ./studio.sh
 
         /home/kyle/Android/Sdk
@@ -81,10 +81,11 @@
 
         37.6 MB
 
+        sudo vim /etc/profile.d/myenv.sh
         export PATH=/u02/app/android-studio/bin:$PATH
         export ANDROID_SDK_ROOT=/home/kyle/Android/Sdk
         export PATH=$PATH:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/tools/bin:$ANDROID_SDK_ROOT/platform-tools
-        source /etc/profile
+        logout
 
         - sdk
         studio -> configure -> sdk manager
