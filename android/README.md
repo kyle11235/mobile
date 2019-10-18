@@ -168,7 +168,7 @@
         - build pkg
         build -> build apk -> myfirstapp2019/app/build/outputs/apk/debug/app-debug.apk
 
-- abd
+- adb
 
         - connect
 
