@@ -146,16 +146,14 @@
 
 - create AVD
 
-        - firstly need to install SDK System images
+        - use recommanded image, or x86, arm on PC is very slow
+        - old, firstly need to install SDK System images
         set proxy in sdk manager, there are many options availible(might need to clear cache, reload... ).
         required system image, for CPU/ABI
         download and extract, move to sdk/system-images (create it if not exist)
         tools -> option -> Android SDK Manager Setting
         clear cache, restart Eclipse / Android Studio and SDK Manager
         download it from http://tools.android-studio.org/, I downloaded the system image for Android 5(JDK1.7 required).
-
-        - click AVD manager in eclipse, create, select HVGA as device, then you can select system image now.
-        see 1 create AVD.PNG
 
 - helloworld
 
@@ -364,6 +362,16 @@
                 - use cache if issue with multiple images
                         Bitmap bitmap = bitmapCache.getBitmap(this, R.drawable.ballon, 576, 384);
 
+        - install apk by adb -> INSTALL_FAILED_TEST_ONLY
+        gradle.properties -> android.injected.testOnly=false
+        or adb install -t app-debug.apk
+        
 - android version / api level
 
         https://developer.android.com/guide/topics/manifest/uses-sdk-element
+        
+- keys
+
+        auto import = preference -> Auto Import (e.g. remove import android.support auto add androidx)
+        format = option + command + L
+
