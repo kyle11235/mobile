@@ -3,8 +3,11 @@
 - install
 
         https://cordova.apache.org/
-        sudo -i
-        install -g cordova
+        sudo npm install -g cordova
+      
+        for error, Unhandled rejection Error: EACCES: permission denied
+        sudo chown -R $USER:$GROUP ~/.npm
+        sudo chown -R $USER:$GROUP ~/.config
 
 - create
 
@@ -49,13 +52,23 @@
 
 - ios
 
-        - env setup guide
+        - guide
         https://cordova.apache.org/docs/en/latest/guide/platforms/ios/index.html#requirements-and-support
 
         - install xcode
-
+        open it to accept terms
+        
+        - install xcode-select
+        xcode-select --install
+        
+        - install ios-deploy (deploy from command line)
+        sudo npm install -g ios-deploy --unsafe-perm=true
+        
+        for error ...but active developer directory '/Library/Developer/CommandLineTools' is a command line tools instance
+        sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+        
         - simulator test
-        ./ios.sh directly without opening xcode
+        ./runIOS.sh directly without opening xcode
 
         - open in xcode
         xcode open -> platforms/ios/HelloWorld.xcworkspace (do not modify code in xcode)
@@ -68,7 +81,7 @@
 
 - android
 
-        - env setup guide
+        - guide
         https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html#requirements-and-support
 
         - install gradle
@@ -79,7 +92,7 @@
         - simulator test
         cordova requirements (no target installed -> Failed to find target with hash string 'android-28' -> reinstall api level 28)
         start AVD in avd manager (ok to close studio)
-        ./android.sh (build apk and install to avd, no need to restart avd)
+        ./runAndroid.sh (build apk and install to avd, no need to restart avd)
 
         - open in android studio
         import platforms/android
