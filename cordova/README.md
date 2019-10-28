@@ -1,5 +1,9 @@
 # cordova
 
+- cordova version / api lavel
+
+        https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html#requirements-and-support
+
 - install
 
         https://cordova.apache.org/
@@ -14,9 +18,7 @@
         cordova create hello
         cd hello
 
-        cordova platform add browser
-        cordova platform add ios
-        cordova platform add android
+        cordova platform add browser        
         cordova platform ls
 
         cordova run browser
@@ -67,16 +69,20 @@
         for error ...but active developer directory '/Library/Developer/CommandLineTools' is a command line tools instance
         sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
         
+        - add platform
+        cordova platform add ios
+
         - simulator test
-        ./runIOS.sh directly without opening xcode
+        cordova run ios -d (directly without opening xcode)
 
-        - open in xcode
-        xcode open -> platforms/ios/HelloWorld.xcworkspace (do not modify code in xcode)
-        select hello from left panel
+        - run in xcode
+        import platforms/ios (do not modify code in xcode)
         HelloCordova -> iPhone8 plus (to use older ios version, preferences -> components)
-        run
+        run it (cordova build after any change)
+        check log from console.log() in xcode output window
 
-        - deploy to device
+        - run in real device
+        configure xcode dev account / team
         ...
 
 - android
@@ -89,22 +95,45 @@
 
         - install android studio
 
+        - add platform
+        cordova platform add android
+
         - simulator test
         cordova requirements (no target installed -> Failed to find target with hash string 'android-28' -> reinstall api level 28)
         start AVD in avd manager (ok to close studio)
-        ./runAndroid.sh (build apk and install to avd, no need to restart avd)
+        cordova run android (build apk and install to avd, no need to restart avd)
 
-        - open in android studio
+        - run in android studio
         import platforms/android
+        run it (cordova build after any change)
 
-        - deploy to device
+        - run in real device
+        cordova build (after any change)
         ...
 
-- plug
+- plugin
 
         A plugin exposes a Javascript API for native SDK functionality
         https://cordova.apache.org/plugins/
+        
+        e.g.
+        cordova plugin add cordova-plugin-bluetoothle
+        
+        update www/js/index.js
+        bluetoothle.initialize(initializeResult, params);
 
-- cordova version / api lavel
+- config
 
-        https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html#requirements-and-support
+        - guide
+        https://cordova.apache.org/docs/en/latest/config_ref/index.html#config-file
+
+        e.g. add bluetooth background mode in ios plist file
+        update hello/config.xml
+
+- dev
+
+        - webpack
+        - ui framework
+        
+
+ 

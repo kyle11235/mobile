@@ -1,5 +1,8 @@
-
 # android
+
+- android version / api level
+
+        https://developer.android.com/guide/topics/manifest/uses-sdk-element
 
 ## insntall
 
@@ -365,13 +368,14 @@
         - install apk by adb -> INSTALL_FAILED_TEST_ONLY
         gradle.properties -> android.injected.testOnly=false
         or adb install -t app-debug.apk
-        
-- android version / api level
 
-        https://developer.android.com/guide/topics/manifest/uses-sdk-element
-        
-- keys
+- dev
 
+        - keys
         auto import = preference -> Auto Import (e.g. remove import android.support auto add androidx)
         format = option + command + L
 
+        - run
+        gradle sync / clear project
+        adb connect
+        run / check log in studio

@@ -21,13 +21,21 @@ var app = {
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
-
     // deviceready Event Handler
     //
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
+
+        // add more events
+        document.addEventListener("pause", this.onPause, false);
+        document.addEventListener("resume", this.onResume, false);
+        document.addEventListener("menubutton", this.onMenuKeyDown, false);
+
+        // do not use inline function in html
+        document.getElementById("deviceready").addEventListener("click", this.onClick);
+
     },
 
     // Update DOM on a Received Event
@@ -40,6 +48,26 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+    },
+    onPause: function() {
+        console.log('onPause');
+    },
+    onResume: function() {
+        console.log('onResume');
+    },
+    onMenuKeyDown: function() {
+        console.log('onMenuKeyDown');
+    },
+    onClick: function() {
+        console.log('onClick');
+        let initializeResult = {};
+        let params = {
+            "request": true,
+            "statusReceiver": false,
+            "restoreKey" : "bluetoothleplugin"
+        }
+        bluetoothle.initialize(initializeResult, params);
+        console.log(JSON.stringify(initializeResult));
     }
 };
 
