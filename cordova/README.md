@@ -116,24 +116,29 @@
         A plugin exposes a Javascript API for native SDK functionality
         https://cordova.apache.org/plugins/
         
-        e.g.
+        - bluethooth
         cordova plugin add cordova-plugin-bluetoothle
         
         update www/js/index.js
         bluetoothle.initialize(initializeResult, params);
+
+        add bluetooth background mode in ios plist file
+        update hello/config.xml
+
+        - device
+        cordova plugin add cordova-plugin-device
 
 - config
 
         - guide
         https://cordova.apache.org/docs/en/latest/config_ref/index.html#config-file
 
-        e.g. add bluetooth background mode in ios plist file
-        update hello/config.xml
-
 - dev
 
-        - webpack
-        - ui framework
-        
+        git clone xxx
+        ./addPlatform.sh (node_modules / platforms / plugins)
 
- 
+        webpack
+        onsenui
+        
+        
