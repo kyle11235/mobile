@@ -125,6 +125,9 @@
         add bluetooth background mode in ios plist file
         update hello/config.xml
 
+        add android permission
+        ...
+
         - device
         cordova plugin add cordova-plugin-device
 

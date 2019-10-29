@@ -36,14 +36,27 @@
         <title>Hello World</title>
     </head>
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
+        
+        <div class="button" id="click">click</div>
+        <div class="button" id="init">init</div>
+        <div class="button" id="scan">scan</div>
+        <div class="button" id="connect">connect</div>
+        <div class="button" id="discover">discover</div>
+        <div class="box">
+            <div>address: <input type="text" value="2F44977F-5BFE-CC96-F19D-4FC4DE699825" id="address"/></div>
+            <div>service uuid: <input type="text" value="180D" id="service"/></div>
+            <div>characteristic uuid: <input type="text" value="2A37" id="characteristic"/></div>
         </div>
+        <div class="button" id="read">read - 2A38</div>
+        <div class="button" id="subscribe">subscribe - 2A37</div>
+        <div class="button" id="write">write - 2A19</div>
+        <div class="button" id="clear">clear</div>
+
+        <div class="box" style="border-color:green;" id="log"></div>
+
         <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        
     </body>
 </html>

@@ -1,0 +1,176 @@
+{
+    "status": "discovered",
+    "services": [
+        {
+            "characteristics": [
+                {
+                    "descriptors": [],
+                    "properties": {
+                        "read": true
+                    },
+                    "uuid": "2A29"
+                },
+                {
+                    "descriptors": [],
+                    "properties": {
+                        "read": true
+                    },
+                    "uuid": "2A24"
+                },
+                {
+                    "descriptors": [],
+                    "properties": {
+                        "read": true
+                    },
+                    "uuid": "2A25"
+                },
+                {
+                    "descriptors": [],
+                    "properties": {
+                        "read": true
+                    },
+                    "uuid": "2A27"
+                },
+                {
+                    "descriptors": [],
+                    "properties": {
+                        "read": true
+                    },
+                    "uuid": "2A28"
+                }
+            ],
+            "uuid": "180A"
+        },
+        {
+            "characteristics": [
+                {
+                    "descriptors": [
+                        {
+                            "uuid": "2902"
+                        }
+                    ],
+                    "properties": {
+                        "notify": true,
+                        "read": true
+                    },
+                    "uuid": "2A19"
+                }
+            ],
+            "uuid": "180F"
+        },
+        {
+            "characteristics": [
+                {
+                    "descriptors": [
+                        {
+                            "uuid": "2902"
+                        }
+                    ],
+                    "properties": {
+                        "notify": true,
+                        "read": true
+                    },
+                    "uuid": "FEE1"
+                },
+                {
+                    "descriptors": [],
+                    "properties": {
+                        "write": true
+                    },
+                    "uuid": "FEE2"
+                },
+                {
+                    "descriptors": [
+                        {
+                            "uuid": "2902"
+                        }
+                    ],
+                    "properties": {
+                        "notify": true
+                    },
+                    "uuid": "FEE3"
+                },
+                {
+                    "descriptors": [],
+                    "properties": {
+                        "writeWithoutResponse": true
+                    },
+                    "uuid": "FEE5"
+                },
+                {
+                    "descriptors": [],
+                    "properties": {
+                        "writeWithoutResponse": true
+                    },
+                    "uuid": "FEE6"
+                }
+            ],
+            "uuid": "FEEA"
+        },
+        {
+            "characteristics": [
+                {
+                    "descriptors": [
+                        {
+                            "uuid": "2902"
+                        }
+                    ],
+                    "properties": {
+                        "notify": true
+                    },
+                    "uuid": "2A37"
+                },
+                {
+                    "descriptors": [],
+                    "properties": {
+                        "read": true
+                    },
+                    "uuid": "2A38"
+                }
+            ],
+            "uuid": "180D"
+        },
+        {
+            "characteristics": [
+                {
+                    "descriptors": [
+                        {
+                            "uuid": "2902"
+                        }
+                    ],
+                    "properties": {
+                        "notify": true,
+                        "read": true
+                    },
+                    "uuid": "FEA1"
+                },
+                {
+                    "descriptors": [],
+                    "properties": {
+                        "read": true
+                    },
+                    "uuid": "FEC9"
+                }
+            ],
+            "uuid": "FEE7"
+        },
+        {
+            "characteristics": [
+                {
+                    "descriptors": [
+                        {
+                            "uuid": "2902"
+                        }
+                    ],
+                    "properties": {
+                        "notify": true
+                    },
+                    "uuid": "FCC1"
+                }
+            ],
+            "uuid": "FCBA"
+        }
+    ],
+    "name": "P70-PRO",
+    "address": "2F44977F-5BFE-CC96-F19D-4FC4DE699825"
+}
