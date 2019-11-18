@@ -376,11 +376,14 @@
         auto import = preference -> Auto Import (e.g. remove import android.support auto add androidx)
         format = option + command + L
         duplicate line = command + D
-        delete line = command + Delete
-        search something = shift twice
+        delete line = command + Delete        
         find in path = command + shift + O
         find file = command + shift + F
-
+        open recent = command + shift + e
+        hide panel = shift + esc
+        back / forward = command + [ / ]
+        locate file in left = click target icon
+        
         - run
         gradle sync / clear project
         adb connect
