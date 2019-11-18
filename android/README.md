@@ -371,13 +371,14 @@
 
 - dev
 
-        - keys - https://developer.android.com/studio/intro/keyboard-shortcuts.html
+        - keys
+        https://developer.android.com/studio/intro/keyboard-shortcuts.html
         auto import = preference -> Auto Import (e.g. remove import android.support auto add androidx)
         format = option + command + L
         duplicate line = command + D
         delete line = command + Delete
         search something = shift twice
-        find in path = command + shift + F
+        find in path = command + shift + O
         find file = command + shift + F
 
         - run
