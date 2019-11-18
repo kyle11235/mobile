@@ -371,11 +371,17 @@
 
 - dev
 
-        - keys
+        - keys - https://developer.android.com/studio/intro/keyboard-shortcuts.html
         auto import = preference -> Auto Import (e.g. remove import android.support auto add androidx)
         format = option + command + L
+        duplicate line = command + D
+        delete line = command + Delete
+        search something = shift twice
+        find in path = command + shift + F
+        find file = command + shift + F
 
         - run
         gradle sync / clear project
         adb connect
         run / check log in studio
+        
