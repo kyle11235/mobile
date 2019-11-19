@@ -375,14 +375,23 @@
         https://developer.android.com/studio/intro/keyboard-shortcuts.html
         auto import = preference -> Auto Import (e.g. remove import android.support auto add androidx)
         format = option + command + L
+        refactor = fn + shift + F6
+        
         duplicate line = command + D
-        delete line = command + Delete        
+        delete line = command + Delete
+        
+        find in file = command + F
+        replace in file = command + R
+        
         find in path = command + shift + O
         find file = command + shift + F
-        open recent = command + shift + e
-        hide panel = shift + esc
+        open recent = command + shift + E
+        
         back / forward = command + [ / ]
         locate file in left = click target icon
+        
+        hide panel = shift + esc
+        hide panel auto = setting icon -> view mode -> dock unpinned
         
         - run
         gradle sync / clear project
