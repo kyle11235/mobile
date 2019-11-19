@@ -18,8 +18,10 @@ public class MainActivity extends ActionBarActivity {
 	Button startButton;
 	Button resetButton;
 
-	// one handler has two queue, runnable object queue and message queue
-	// one handler has one thread to execute runnable object
+	// There are two main uses for a Handler: 
+	// (1) to schedule messages and runnables to be executed at some point in the future; and 
+	// (2) to enqueue an action to be performed on a different thread than your own.
+
 	Handler handler = new Handler() {
 
 		@Override
@@ -29,8 +31,6 @@ public class MainActivity extends ActionBarActivity {
 		}
 	};
 
-	// probably use while is not good, Ui will be blocked, if use handler.post, although it’s same thread, it will not block UI event
-	// need to check answers
 	Runnable worker = new Runnable() {
 
 		@Override
@@ -47,11 +47,11 @@ public class MainActivity extends ActionBarActivity {
 			// have a rest and update progress
 			Message msg = handler.obtainMessage();
 			msg.arg1 = count;
-			handler.sendMessage(msg);
+			handler.sendMessage(msg); // sendMessage, sendMessageDeplay -> handleMessage
 
 			// continue to work
 			if (count < 100) {
-				handler.post(worker);
+				handler.post(worker); // post, postDelay -> run
 			}
 
 		}

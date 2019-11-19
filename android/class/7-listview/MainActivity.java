@@ -39,7 +39,7 @@ public class MainActivity extends Activity {
 				ll.setPadding(5, 5, 5, 5);
 				
 				ImageView iv = new ImageView(MainActivity.this);
-				//设置image 可以这样调用本地资源id，可以传入bitmap(从网络or本地资源获取)
+				//璁剧疆image 鍙互杩欐牱璋冪敤鏈湴璧勬簮id锛屽彲浠ヤ紶鍏itmap(浠庣綉缁渙r鏈湴璧勬簮鑾峰彇)
 				iv.setImageDrawable(getResources().getDrawable(imageIds[position]));
 				iv.setScaleType(ScaleType.FIT_XY);
 				

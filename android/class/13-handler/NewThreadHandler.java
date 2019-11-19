@@ -21,13 +21,13 @@ public class MainActivity extends ActionBarActivity {
 	Button resetButton;
 
 
-	// below is the real new thread to execute task
+	// When you create a new Handler, it is bound to the thread / message queue of the thread that is creating it 
+	// You can create your own threads, and communicate back with the main application thread through a Handler
 	class MyHandler extends Handler{
 		public MyHandler(){
 			
 		}
 		
-		// this is the difference
 		public MyHandler(Looper looper){
 			super(looper);
 		}
@@ -81,9 +81,10 @@ public class MainActivity extends ActionBarActivity {
 
 			progressBar.setVisibility(v.VISIBLE);
 
-			// use real new thread handler
+			// new thread
 			HandlerThread handlerThread = new HandlerThread("handlerThread");
 			handlerThread.start();
+
 			MyHandler handler = new MyHandler(handlerThread.getLooper());
 			Message msg = handler.obtainMessage();
 			
@@ -91,7 +92,7 @@ public class MainActivity extends ActionBarActivity {
 			bundle.putString("name", "kyle");
 			bundle.putInt("age", 20);
 			msg.setData(bundle);
-			msg.sendToTarget();// send to the object who created the message
+			msg.sendToTarget(); // -> handleMessage
 			
 		}
 

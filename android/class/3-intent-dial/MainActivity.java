@@ -22,17 +22,6 @@ public class MainActivity extends ActionBarActivity {
 
 	private BitmapCache bitmapCache = BitmapCache.getInstance();
 	
-	private static MediaPlayer player;
-	
-//	@Override
-//	protected void onCreate(Bundle savedInstanceState) {
-//		super.onCreate(savedInstanceState);
-//
-//		MyView iv = new MyView(this);
-//		this.setContentView(iv);
-//		
-//	}
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -55,46 +44,16 @@ public class MainActivity extends ActionBarActivity {
 				
 				if (PhoneNumberUtils.isGlobalPhoneNumber(phoneNumber)) {
 					Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel://"+phoneNumber));
-					
-					MainActivity.player.start();
-					
+										
 					// use ...this, because it's in a new object
 					MainActivity.this.startActivity(intent);
 				}else{
-					Toast.makeText(MainActivity.this, "ºÅÂë²»ÕýÈ·", 5000).show();
+					Toast.makeText(MainActivity.this, "xxx", 5000).show();
 				}
 			}
 		});
 		
 	}
-
-	
-//	@Override
-//	protected void onCreate(Bundle savedInstanceState) {
-//		super.onCreate(savedInstanceState);
-//
-//		/*1.use defined layout*/
-//		// setContentView(R.layout.activity_main);
-//
-//		/*2.create view dynamically*/
-//		ImageView iv = new ImageView(this);
-//		// 2.1 use BitmapUtil, no cache, but this is non-synchronized operation
-//		// BitmapUtil.loadBitmap(getResources(), R.drawable.ballon, iv, 576, 384, null);
-//		
-//		// 2.2 use BitmapCache, BitmapCache use BitmapUtil to scale image internally
-//		Bitmap bitmap = bitmapCache.getBitmap(this, R.drawable.ballon, 576, 384);
-//		// test get it from cache
-//		bitmap = bitmapCache.getBitmap(this, R.drawable.ballon, 576, 384);
-//		iv.setImageBitmap(bitmap);
-//		this.setContentView(iv);
-//		
-//		
-//		
-//		/*3.media player*/
-//		MediaPlayer player = MediaPlayer.create(this, R.raw.kasabulanka);
-//		player.start();
-//		
-//	}
 
 	
 	@Override

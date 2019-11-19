@@ -4,7 +4,7 @@ import android.os.AsyncTask;
 import android.widget.TextView;
 
 // input type, update type, return type
-public class MyAsynTask extends AsyncTask<String, Integer, Boolean> {
+public class MyAsyncTask extends AsyncTask<String, Integer, Boolean> {
 
 	
 	TextView textView;

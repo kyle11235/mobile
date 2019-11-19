@@ -316,11 +316,14 @@
 
 - components
 
-        Activity, lifecycle
+        Activity
+        Fragment
+        Intent
+        Handler
         Service
         BrocastReceiver
         ContentProvider
-        Intent
+        AsynTask
 
 - fragment -> cheeck the 3 activities
 
@@ -373,7 +376,10 @@
 
         - keys
         https://developer.android.com/studio/intro/keyboard-shortcuts.html
+
         auto import = preference -> Auto Import (e.g. remove import android.support auto add androidx)
+        import = double click -> option + enter
+
         format = option + command + L
         refactor = fn + shift + F6
         
