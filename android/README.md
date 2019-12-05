@@ -387,14 +387,15 @@
         delete line = command + Delete
         
         find in file = command + F
+        find in path = command + shift + F
         replace in file = command + R
         
-        find in path = command + shift + O
-        find file = command + shift + F
+        find file in path = command + shift + O
         open recent = command + shift + E
         
-        back / forward = command + [ / ]
-        locate file in left = click target icon
+        go back / forward = command + [ / ]
+        go implementation = command + option + B
+        reveal file in left = click target icon
         
         hide panel = shift + esc
         hide panel auto = setting icon -> view mode -> dock unpinned
