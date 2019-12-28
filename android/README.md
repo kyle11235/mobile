@@ -319,11 +319,31 @@
         Activity
         Fragment
         Intent
-        Handler
-        Service
+        
+        - Handler
+        usecase 1. schedule task (postDelayed... / sendDelayed)
+        usecase 2. communication / callback between different threads e.g. main thread and new thread (send... + handleMessage)
+        
+        - new Thread().start()
+        usecase 1. off main thead (new Runnable...)
+        usecase 2. schedule task (Thread.sleep)
+        
+        - AsynTask
+        off main thead, preExecute / onProgressUpdate / postExecute offer you access to the GUI(main thread)
+        asyntack = new thread + handler
+        
+        - sheduled task
+        step 1. Handler handler=new Handler()
+        step 2. Runnable runnable=new Runnable() { run(){ handler.postDelayed(this, time); }}
+        step 3. handler.postDelayed(runnable, time)
+        
+        - Service
+        long-running operations, no ui
+        vs thread -> controable / indepent of ui's start/stop
+        by default service is still on main thread, create new thread for heavy work
+        
         BrocastReceiver
         ContentProvider
-        AsynTask
 
 - fragment -> cheeck the 3 activities
 
