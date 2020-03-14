@@ -198,6 +198,13 @@
 
                 - ip
                 adb shell netcfg
+                adb shell ifconfig
+                
+                - all port in use
+                adb shell netstat -an
+                
+                - port in use
+                adb shell netstat -an | grep "8080"
 
                 - list all apps
                 adb shell pm list packages
@@ -274,6 +281,10 @@
                 adb shell screencap -p /sdcard/sc.png
                 adb pull /sdcard/sc.png ./doc/sc.png
 
+        - open browser
+        
+                adb shell am start -a android.intent.action.VIEW -d http://172.20.10.2:8080/api/get
+                
         - record video, max 180 sec
 
                 adb shell screenrecord /sdcard/video.mp4
@@ -300,8 +311,8 @@
         - log
 
                 adb logcat "tag:level" (V / D / W / E / F / S)
-                e.g. adb logcat "*:E"
-                e.g. adb logcat "*:E" | grep com.example.myfirstapp2019
+                e.g. adb logcat "*:V"
+                e.g. adb logcat "*:V" | grep HOOK (tag name used by app)
 
         - flash system
 
@@ -311,6 +322,7 @@
 
         adb connect ...
         abd shell
+        su (change to root)
         ls sdcard
         ls data -> opendir failed, Permission denied
 
