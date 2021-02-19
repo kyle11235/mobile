@@ -137,15 +137,18 @@
 - install gradle
 
         - jdk is required
-        - most unix
+        
+        - most unix & mac
         install sdkman -> curl -s "https://get.sdkman.io" | bash
         source "$HOME/.sdkman/bin/sdkman-init.sh"
+        
         sdk install gradle 5.6.2
         gradle -v
 
         - mac
         install brew
         brew install gradle
+        gradle -v
 
 - create AVD
 
